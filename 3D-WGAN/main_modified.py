@@ -12,8 +12,9 @@ from network import Generator, Discriminator
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-p', '--path', type=object)
+parser.add_argument('-p', '--path', type=str)
 args = parser.parse_args()
+
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
