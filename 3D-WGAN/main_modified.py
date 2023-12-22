@@ -175,7 +175,7 @@ if __name__ == "__main__":
             plotting.plot_img(featmask,title="FAKE")
             plotting.show()
             
-        if (iteration+1)%500 ==0:
+        if (iteration+1)%500 == 0 | iteration == TOTAL_ITER-1:
             os.makedirs('./checkpoint', exist_ok=True)
             torch.save(G.state_dict(),'./checkpoint/G_W_iter'+str(iteration+1)+'.pth')
             torch.save(D.state_dict(),'./checkpoint/D_W_iter'+str(iteration+1)+'.pth')
