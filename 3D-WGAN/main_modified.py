@@ -9,7 +9,11 @@ from torch.utils.data import DataLoader
 from nilearn import plotting
 from dataset import Custom_Dataset
 from network import Generator, Discriminator
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument('-p', '--path', type=object)
+args = parser.parse_args()
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -18,7 +22,8 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # data_dir = '/data2/gayrat/vs-projects/MY_GANs/datasets/CT-0'
 # data_dir = './datasets/3d_img_process/CT_64'
-data_dir = './datasets/CT-0'
+# data_dir = './datasets/CT-0'
+data_dir = args.path
 
 
 
