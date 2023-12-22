@@ -13,6 +13,7 @@ import argparse, os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--path', type=str)
+parser.add_argument('--epochs', type=int)
 args = parser.parse_args()
 
 
@@ -25,7 +26,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # data_dir = './datasets/3d_img_process/CT_64'
 # data_dir = './datasets/CT-0'
 data_dir = args.path
-
+TOTAL_ITER = args.epochs
 
 
 BATCH_SIZE=4
@@ -95,7 +96,7 @@ d_losses = list()
 g_losses = list()
 divergences = list()
 
-TOTAL_ITER = 200000
+# TOTAL_ITER = 200000
 gen_load = inf_train_gen(train_loader)
 
 count=0
