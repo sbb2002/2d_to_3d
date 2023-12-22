@@ -6,7 +6,9 @@ from scipy import ndimage
 import cv2
 import matplotlib.pyplot as plt
 
-data_dir='/data2/gayrat/vs-projects/MY_GANs/datasets/CT-0'
+# data_dir='/data2/gayrat/vs-projects/MY_GANs/datasets/CT-0'
+data_dir='./datasets/CT-0'
+
 
 def read_nifti_file(filepath):
     """Read and load volume"""

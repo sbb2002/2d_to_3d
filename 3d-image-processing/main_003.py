@@ -4,7 +4,8 @@ import re
  
 from os.path import isfile, join
 
-pathIn= '/data2/gayrat/vs-projects/3d-img-processing/SCANS'
+# pathIn= '/data2/gayrat/vs-projects/3d-img-processing/SCANS'
+pathIn= './datasets/3d_img_process/CT_64'
 pathOut = 'video_3d.avi'
 fps = 4.0
 
