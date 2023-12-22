@@ -173,7 +173,7 @@ if __name__ == "__main__":
 
             featmask = nib.Nifti1Image(featmask,affine = np.eye(4))
             plotting.plot_img(featmask,title="FAKE")
-            # plotting.show()
+            plotting.show()
             
         if (iteration+1)%500 ==0:
             os.makedirs('./checkpoint', exist_ok=True)
