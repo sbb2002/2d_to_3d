@@ -1,0 +1,6 @@
+231222      3D Gan의 파악, 수정, 동작확인이 완료됨. Local에선 돌릴 수 없고 최소 Colab T4 GPU를 사용해야됨. 또한 매우 heavy한 작업이기 때문에 약 보름이 소요됨.
+            수정된 코드 운용은 github branch(JHY)로 이루어짐. 애 좀 먹었음;;
+            코드를 다운로드하거나 Colab에서 시험하고 싶다면 아래 코드를 쳐서 받으면 되고,
+            코드를 수정한 후 업로드하여 활용하면 됨.
+                * 다운로드 : `!git clone -b JHY https://github.com/sbb2002/2d_to_3d`
+                * 업로드 : `git add .` -> `git commit -m 왱알왱알` -> `git push` (git branch로 JHY인지 확인 필)

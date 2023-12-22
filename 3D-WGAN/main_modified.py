@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 from nilearn import plotting
 from dataset import Custom_Dataset
 from network import Generator, Discriminator
-import argparse
+import argparse, os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--path', type=str)
@@ -175,5 +175,6 @@ if __name__ == "__main__":
             # plotting.show()
             
         if (iteration+1)%500 ==0:
+            os.makedirs('./checkpoint', exist_ok=True)
             torch.save(G.state_dict(),'./checkpoint/G_W_iter'+str(iteration+1)+'.pth')
             torch.save(D.state_dict(),'./checkpoint/D_W_iter'+str(iteration+1)+'.pth')
